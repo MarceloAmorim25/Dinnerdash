@@ -1,3 +1,4 @@
 class OrderMeal < ApplicationRecord
-    has_many: Order
+    belongs_to :order
+    belongs_to :meal
 end
