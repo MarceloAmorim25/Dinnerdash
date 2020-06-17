@@ -1,3 +1,3 @@
 class MealCategory < ApplicationRecord
-    has_many: Meal
+    validates :name, presence: true
 end
