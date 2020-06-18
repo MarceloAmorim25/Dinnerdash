@@ -1,3 +1,6 @@
 class Meal < ApplicationRecord
-    has_many: OrderMeal
+    validates :name, presence: true
+
+    has_many :order_meals
+
 end

@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-    has_may: Order
+    validates :name, presence: true
+    has_many :order
 end

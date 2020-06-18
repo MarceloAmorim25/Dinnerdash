@@ -1,3 +1,3 @@
 class Situation < ApplicationRecord
-    has_many: Order
+    has_many :order
 end
