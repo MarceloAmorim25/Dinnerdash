@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  get "/meals", to: "meals#index"
-  get "/meals/:id", to: "meals#show"
-  post "/meals", to: "meals#create"
-  put "/meals/:id", to: "meals#update"
-  delete "/meals/:id", to: "meals#destroy"
+  resources :meals, only: [:index, :show, :update, :create, :destroy]
+  resources :users, only: [:index, :show, :update, :create, :destroy]
+  resources :orders, only: [:index, :show, :update, :create, :destroy]
+  resources :order_meals, only: [:index, :show, :update, :create, :destroy]
 
 end

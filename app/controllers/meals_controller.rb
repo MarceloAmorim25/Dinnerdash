@@ -18,7 +18,7 @@ class MealsController < ApplicationController
             if @meal.save
                 render json:@meal, status: 200
             else
-                render json:@meal.errors, status :unprocessable_entity
+                render json:@meal.errors, status: unprocessable_entity
             end
         end
         
@@ -28,7 +28,7 @@ class MealsController < ApplicationController
             if @meal = @meal.update(name: params[:name], description: params[:description], price: params[:price], avaiable: params[:avaiable]) 
                 render json: @meal, status: 200
             else 
-                render json: @meal.errors, status :unprocessable_entity
+                render json: @meal.errors, status: unprocessable_entity
             end
         end
 
