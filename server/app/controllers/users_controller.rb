@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
             #GET "/users"
             def index 
+                @lucasClient = User.ransack(name_cont: "lucas").result
+                @googleMails = User.ransack(email_cont_any: %w(gmail)).result
                 @users = User.all
                 render json:@users, status: 200
             end
